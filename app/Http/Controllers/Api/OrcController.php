@@ -56,6 +56,9 @@ class OrcController extends Controller
      */
     public function destroy(Orc $orc)
     {
+        $orc->delete();
+        
+
         return response()->json(['message' => 'Orc deleted successfully'], 204);
     }
 }
